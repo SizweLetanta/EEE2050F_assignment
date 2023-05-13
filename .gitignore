@@ -1,3 +1,10 @@
 /.DS_Store
 /.vscode
 /a.out
+Core/.DS_Store
+.gitignore
+.DS_Store
+Core/.DS_Store
+build/main.o
+.gitignore
+build/main.o
