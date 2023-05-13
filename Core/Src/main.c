@@ -1,8 +1,8 @@
 //********************************************************************
 //*                    EEE2046F C template                           *
 //*==================================================================*
-//* WRITTEN BY: Jesse Arendse   	                 		               *
-//* DATE CREATED: 07/04/2023                                         *
+//* WRITTEN BY: Sizwe Letanta   	                 		         *
+//* DATE CREATED: 11/05/2023                                         *
 //* MODIFIED:                                                        *
 //*==================================================================*
 //* PROGRAMMED IN: Visual Studio Code                                *
@@ -19,41 +19,37 @@
 //====================================================================
 // GLOBAL CONSTANTS
 //====================================================================
+#define DELAY 0.001 // The time between ticks
+#define FREQUENCY 48e6 // Frequency of the system clock
+#define MAX_CLK_COUNT 65536.0 // 2^16
+
+#define FALSE 0
+#define TRUE 1
+typedef u_int8_t flag_t;
 
 //====================================================================
 // GLOBAL VARIABLES
 //====================================================================
+int tim = 0;
+char buff[16]; // To store the time displayed on the screen
+
+flag_t startFlag = FALSE, lapFlag = FALSE, stopFlag = FALSE, resetFlag = TRUE; // flags
 
 //====================================================================
 // FUNCTION DECLARATIONS
 //====================================================================
-void init_timers(void);
+void initTIM14(void);
 void TIM14_IRQHandler(void);
-int get_msec(int tim);
-int get_secs(int tim);
-int get_mins(int tim);
-int get_hrs(int tim);
+void initGPIO(void);
+
 //====================================================================
 // MAIN FUNCTION
 //====================================================================
 int main(void) {
 	init_LCD();
-	lcd_command(CLEAR);
-	lcd_putstring("Hello");
-	init_timers();
-	double tim = 0.0f;
-	char buff[10];
+	initTIM14();
 	while (1) {
-		while (!(TIM14->SR & TIM_SR_UIF)) {
-		};
-		TIM14->SR &= ~TIM_SR_UIF;
-		tim += 0.5f;  
-		if (!(((int) tim )% 100)) {
-			sprintf(buff, "%f", tim);
-			lcd_command(CLEAR);
-			lcd_putstring(buff);
-		}
-		// delay(10000);
+
 	}
 
 }  // End of main
@@ -61,34 +57,53 @@ int main(void) {
 //====================================================================
 // FUNCTION DEFINITIONS
 //====================================================================
-void init_timers(void) {
-	float cyc_needed = 48;
-	int presc = ceil(cyc_needed / (65536));
+void initTIM14(void) {
+
+	// Calculate the prescaler and ARR values
+	double cyc_needed = DELAY * FREQUENCY;
+	int presc = (int)(cyc_needed / MAX_CLK_COUNT);
 	int arr = floor(cyc_needed / presc) - 1;
+
+	// Initialise the timer
 	RCC->APB1ENR |= RCC_APB1ENR_TIM14EN;
 	TIM14->PSC |= presc;
 	TIM14->ARR |= arr;
-	TIM14->DIER |= (1);
+	TIM14->DIER |= TIM_DIER_UIE;
 	TIM14->CR1 |= TIM_CR1_CEN;
+
+	NVIC_EnableIRQ(TIM14_IRQn);
 }
 
-int get_ms(int tim) {
-	return (tim / 100) % 100;
-}
+void initGPIO(void) {
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;  // Connects Clock Signal
+	GPIOA->MODER &= ~(GPIO_MODER_MODER0 | GPIO_MODER_MODER1 |
+					  GPIO_MODER_MODER2 | GPIO_MODER_MODER3);  // we use the ~ because we want 0's instead of 1's
 
-int get_secs(int tim) {
-	return (tim / 100000) % 60;
-}
+	// Enables Pull Up resistors
+	GPIOA->PUPDR |= 0x00000055;
+	GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPDR0_1 | GPIO_PUPDR_PUPDR1_1 | GPIO_PUPDR_PUPDR2_1 | GPIO_PUPDR_PUPDR3_1);
 
-int get_mins(int tim) {
-	return (tim / 6000000) % 60;
-}
+	RCC->AHBENR |= RCC_AHBENR_GPIOBEN;	// Connects Clock Signal
 
-void get_time(int tim, char* buffer) {
-	sprintf(buffer, "%02d:%02d.%02d", get_mins(tim), get_secs(tim), get_ms(tim));
+	// Configures LEDs to output modes
+	GPIOB->MODER |= (GPIO_MODER_MODER0_0
+					|GPIO_MODER_MODER1_0
+					|GPIO_MODER_MODER2_0
+					|GPIO_MODER_MODER3_0);
+
+	GPIOB->ODR = 0x00000000;  // Ensures LEDs are off
 }
 
 void TIM14_IRQHandler(void) {
+	++tim;
+	TIM14->SR &= ~TIM_SR_UIF;
+	if (!(tim % 21)) {
+		get_time(tim, buff);
+		lcd_command(CLEAR);
+		lcd_putstring("Hello");
+		lcd_command(LINE_TWO);
+		lcd_putstring(buff);
+	}
 }
 //********************************************************************
 // END OF PROGRAM
