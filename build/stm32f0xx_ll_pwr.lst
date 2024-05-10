@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c **** 
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c **** /** @defgroup PWR_LL PWR
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c ****   * @{
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 2
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 2
 
 
   33:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   18:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****       Workarounds:
   19:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****       (#) For AHB & APB peripherals, a dummy read to the peripheral register has been
   20:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****           inserted in each LL_{BUS}_GRP{x}_EnableClock() function.
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 3
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 3
 
 
   21:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   75:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMA2           RCC_AHBENR_DMA2EN
   76:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #endif /*DMA2*/
   77:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_SRAM           RCC_AHBENR_SRAMEN
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 4
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 4
 
 
   78:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_FLASH          RCC_AHBENR_FLITFEN
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  132:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #if defined(USB)
  133:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR_USBEN
  134:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #endif /* USB */
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 5
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 5
 
 
  135:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** #if defined(CAN)
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  189:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** 
  190:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB1 AHB1
  191:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   * @{
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 6
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 6
 
 
  192:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  246:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         AHBENR       GPIOFEN       LL_AHB1_GRP1_IsEnabledClock\n
  247:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         AHBENR       TSCEN         LL_AHB1_GRP1_IsEnabledClock
  248:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 7
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 7
 
 
  249:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  303:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   CLEAR_BIT(RCC->AHBENR, Periphs);
  304:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** }
  305:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** 
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 8
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 8
 
 
  306:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** /**
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  360:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** /**
  361:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   * @}
  362:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   */
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 9
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 9
 
 
  363:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  417:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
  418:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->APB1ENR, Periphs);
  419:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   (void)tmpreg;
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 10
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 10
 
 
  420:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** }
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  474:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   * @rmtoll APB1ENR      TIM2EN        LL_APB1_GRP1_DisableClock\n
  475:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1ENR      TIM3EN        LL_APB1_GRP1_DisableClock\n
  476:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1ENR      TIM6EN        LL_APB1_GRP1_DisableClock\n
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 11
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 11
 
 
  477:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1ENR      TIM7EN        LL_APB1_GRP1_DisableClock\n
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
  531:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1RSTR     USART2RST     LL_APB1_GRP1_ForceReset\n
  532:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1RSTR     USART3RST     LL_APB1_GRP1_ForceReset\n
  533:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1RSTR     USART4RST     LL_APB1_GRP1_ForceReset\n
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 12
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 12
 
 
  534:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h ****   *         APB1RSTR     USART5RST     LL_APB1_GRP1_ForceReset\n
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   51              	.LBB8:
   52              	.LBI8:
  571:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** }
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 13
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 13
 
 
  572:Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_bus.h **** 
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   57 000e 0349     		ldr	r1, .L2+4
   58 0010 0A40     		ands	r2, r1
   59 0012 1A61     		str	r2, [r3, #16]
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 14
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 14
 
 
   60              	.LVL2:
@@ -806,13 +806,13 @@ ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 1
   80              		.file 4 "/Users/sizweletanta/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vsc
   81              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
   82              		.file 6 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h"
-ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s 			page 15
+ARM GAS  /var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_ll_pwr.c
-/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s:19     .text.LL_PWR_DeInit:0000000000000000 $t
-/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s:25     .text.LL_PWR_DeInit:0000000000000000 LL_PWR_DeInit
-/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccjT3arf.s:72     .text.LL_PWR_DeInit:0000000000000018 $d
+/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s:19     .text.LL_PWR_DeInit:0000000000000000 $t
+/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s:25     .text.LL_PWR_DeInit:0000000000000000 LL_PWR_DeInit
+/var/folders/zf/mkqpy7tx7p1_khjt1h6hykn40000gn/T//ccyMObhu.s:72     .text.LL_PWR_DeInit:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS
